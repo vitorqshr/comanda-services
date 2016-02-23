@@ -21,9 +21,9 @@ public class ProductResource
 
    // just an example to simulate a database
    private static List<Product> products = new ArrayList<Product>(Arrays.asList(new Product(
-         "jaxrs-project"), new Product("spring-project")));
+         "vitor"), new Product("quaresma")));
 
-   @Path("/")
+   @Path("/listar")
    @GET
    @Produces(value = { MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
    public List<Product> exampleGet()
