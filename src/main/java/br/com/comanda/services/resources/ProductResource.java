@@ -21,7 +21,7 @@ public class ProductResource
 
    // just an example to simulate a database
    private static List<Product> products = new ArrayList<Product>(Arrays.asList(new Product(
-         "vitor"), new Product("quaresma")));
+         "vitor"), new Product("quaresma"), new Product("silveira")));
 
    @Path("/listar")
    @GET
