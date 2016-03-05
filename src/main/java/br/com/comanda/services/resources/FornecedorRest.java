@@ -16,6 +16,7 @@ import javax.ws.rs.core.Response;
 
 import br.com.comanda.services.models.Fornecedor;
 import br.com.comanda.services.models.Product;
+import br.com.comanda.services.models.Telefone;
 
 @Path("/fornecedor")
 public class FornecedorRest {
@@ -28,12 +29,16 @@ public class FornecedorRest {
 	   @Produces(value = { MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
 	   public List<Fornecedor> exampleGet()
 	   {
+		   Telefone telefone = new Telefone();
+		   telefone.setIdTelefone(1);
+		   telefone.setTelefone("12345678");
 		   fornecedores = new ArrayList<Fornecedor>();
 		   Fornecedor for1 = new Fornecedor();
 		   for1.setCnpj("12345");
 		   for1.setDataCadastro(new Date());
 		   for1.setFornecedor("Vitor Quaresma");
 		   for1.setIdFornecedor(1);
+		   for1.setTelefone(telefone);
 		   fornecedores.add(for1);
 		   
 		   Fornecedor for2 = new Fornecedor();
